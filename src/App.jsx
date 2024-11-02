@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
           <NavbarComponent/>
-          <ItemListContainer greeting = 'Bienvenido a Virtaul zone'/>
+          <ItemListContainer greeting = 'Bienvenido a Virtual zone'/>
     </div>
   )
 }
