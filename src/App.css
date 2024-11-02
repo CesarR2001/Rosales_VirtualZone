@@ -1,0 +1,79 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1c1c1c, #2d2d2d); /* Degradado oscuro */
+  padding: 15px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #f0f0f0; /* Color claro para el logo */
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Efecto de movimiento */
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+.aLink {
+  margin: 0 20px;
+  color: #f0f0f0; /* Color claro para enlaces */
+  text-decoration: none;
+  font-size: 18px;
+  position: relative; /* Posicionamiento para el subrayado */
+  padding: 5px; /* Espaciado interno */
+  transition: color 0.3s ease; /* Transición suave */
+}
+
+.aLink:hover {
+  color: #015aff; /* Celeste brillante al pasar el ratón */
+}
+
+.aLink::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #00bcd4; /* Subrayado celeste */
+  transition: width 0.3s ease; /* Transición del subrayado */
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Espaciado del subrayado */
+  transform: translateX(-50%);
+}
+
+.aLink:hover::after {
+  width: 100%; /* Ancho completo al pasar el ratón */
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+  .navContainer {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      align-items: flex-start;
+  }
+
+  .aLink {
+      margin: 10px 0; /* Espaciado vertical entre enlaces */
+  }
+}
+
+.ListContainer {
+  text-align: center; /* Centrar el texto */
+  margin: 40px 0; /* Espaciado vertical */
+}
+
+.ListContainer h1 {
+  font-size: 48px; /* Tamaño de fuente grande */
+  color: #ffffff; /* Color blanco para el texto */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Sombra para dar profundidad */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  animation: pulse 1.5s infinite; /* Efecto de pulso */
+}
+
+.ListContainer h1:hover {
+  color:  #015aff }
