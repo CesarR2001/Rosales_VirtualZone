@@ -11,7 +11,7 @@ Este proyecto sobre un e-commerce hecho con las bases de react con javascript en
 - Ejecute npm run dev para levantarlo en el servidor local
 
 ### Version HOST 
-Si desea ver el proyecto online, puede ingresar al siguiente link [VirtualZone]()
+Si desea ver el proyecto online, puede ingresar al siguiente link [VirtualZone](https://virtual-zone-zeta.vercel.app/)
 
 ### Librerias utilizadas en este proyecto
 

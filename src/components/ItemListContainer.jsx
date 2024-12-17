@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from "react"
-import { getProducts,productosDB } from "../mock/data"
 import ItemList from './ItemList'
 import { useParams } from "react-router-dom"
 import Loader from "./Loader"
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../services/firebase"
+
 
 const ItemListContainer = ({greeting}) => {
     const[products, setProducts]=useState([])

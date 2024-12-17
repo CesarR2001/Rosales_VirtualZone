@@ -53,24 +53,25 @@ const Checkout = () => {
   }
 
   return (
-    <div>
-        {orderId !== '' ? <div>
+    <div className="checkout-container">
+        {orderId !== '' ? 
+        <div className="order-success">
                 <h4>Generaste bien tu orden!</h4>
                 <h5>El id es: {orderId}</h5>
                 <Link to='/' className='btn btn-success'>Volver a home</Link>
         </div>
         :
-        <div>
-        <h4>Completa con tus datos</h4>
-        <form className='d-flex flex-column align-items-center' onSubmit={finalizarCompra}>
-            <input type="text" name='name' placeholder='Ingrese su nombre' onChange={userData}/>
-            <input type="text" name='lastname' placeholder='Ingrese su apellido' onChange={userData}/>
-            <input type="text" name='address' placeholder='Ingrese su dirección' onChange={userData}/>
-            <input type="email" name='email' placeholder='Ingrese su correo' onChange={userData}/>
-            <input type="email" name='second-email' placeholder='Repita su correo' onChange={(e)=> setValidate(e.target.value)} />
-            <button className='btn btn-success' type='submit'>Enviar</button>
-        </form>
-    </div>}
+        <div className="form-container">
+            <h4>Completa con tus datos</h4>
+            <form className="checkout-form" onSubmit={finalizarCompra}>
+                <input type="text" name='name' placeholder='Ingrese su nombre' onChange={userData}/>
+                <input type="text" name='lastname' placeholder='Ingrese su apellido' onChange={userData}/>
+                <input type="text" name='address' placeholder='Ingrese su dirección' onChange={userData}/>
+                <input type="email" name='email' placeholder='Ingrese su correo' onChange={userData}/>
+                <input type="email" name='second-email' placeholder='Repita su correo' onChange={(e)=> setValidate(e.target.value)} />
+                <button className='btn btn-success' type='submit'>Enviar</button>
+            </form>
+        </div>}
     </div>
   )
 }
