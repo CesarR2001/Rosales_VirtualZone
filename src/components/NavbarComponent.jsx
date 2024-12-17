@@ -8,8 +8,10 @@ const NavbarComponent = () => {
             <NavLink className="aLink" to='/product/nuevos'> Juegos Nuevos</NavLink>
             <NavLink className="aLink" to='/product/ofertas'> Ofertas</NavLink>
             <NavLink className="aLink" to='/product/mas vendidos'> Mayores Ventas</NavLink>
+            <NavLink to='/cart' style={{textDecorationLine:'none'}}>
             < CardWidgetReactIcon counter={15}/> 
             {/* este es un ejemplo de props */}
+            </NavLink>
         </nav> 
     )
 

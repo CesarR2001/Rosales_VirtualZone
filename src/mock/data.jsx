@@ -1,15 +1,8 @@
-const productos = [
+//Para subir dinamicamente, borren los ids y el producto que subieron a mano
+//Exporten el array para usarlo en otro lado
+
+export const productosDB = [
     {
-        id: '1',
-        name: 'The Legend of Zelda: Breath of the Wild',
-        stock: 30,
-        price: 60,
-        description: 'Aventura épica en un mundo abierto con un sistema de combate y exploración innovador.',
-        img: 'https://i.postimg.cc/Pr0XMPcK/The-Legendof-Zelda.jpg',
-        category: 'nuevos'
-    },
-    {
-        id: '2',
         name: 'The Witcher 3: Wild Hunt',
         stock: 15,
         price: 40,
@@ -18,7 +11,6 @@ const productos = [
         category: 'ofertas'
     },
     {
-        id: '3',
         name: 'Red Dead Redemption 2',
         stock: 25,
         price: 55,
@@ -27,7 +19,6 @@ const productos = [
         category: 'mas vendidos'
     },
     {
-        id: '4',
         name: 'Minecraft',
         stock: 50,
         price: 30,
@@ -36,7 +27,6 @@ const productos = [
         category: 'mas vendidos'
     },
     {
-        id: '5',
         name: 'God of War (2018)',
         stock: 20,
         price: 45,
@@ -45,7 +35,6 @@ const productos = [
         category: 'nuevos'
     },
     {
-        id: '6',
         name: 'Horizon Zero Dawn',
         stock: 18,
         price: 40,
@@ -54,7 +43,6 @@ const productos = [
         category: 'ofertas'
     },
     {
-        id: '7',
         name: 'Super Mario Odyssey',
         stock: 30,
         price: 50,
@@ -63,7 +51,6 @@ const productos = [
         category: 'nuevos'
     },
     {
-        id: '8',
         name: 'Resident Evil 4',
         stock: 40,
         price: 60,
@@ -72,45 +59,6 @@ const productos = [
         category: 'mas vendidos'
     }
 ];
-
-// const productos= [
-//     {
-//         id:'1',
-//         name:'Random 1',
-//         stock:10,
-//         price:50,
-//         description:'lorem ipsu,dkfnkdnfdnfkdnflk',
-//         img:'https://picsum.photos/200',
-//         category:'nuevos'
-//     },
-//     {
-//         id:'2',
-//         name:'Random 2',
-//         stock:18,
-//         price:150,
-//         description:'lorem ipsu,dkfnkdnfdnfkdnflk',
-//         img:'https://picsum.photos/201',
-//         category:'ofertas'
-//     },
-//     {
-//         id:'3',
-//         name:'Random 3',
-//         stock:50,
-//         price:5000,
-//         description:'lorem ipsu,dkfnkdnfdnfkdnflk',
-//         img:'https://picsum.photos/203',
-//         category:'mas vendidos'
-//     },
-//     {
-//         id:'4',
-//         name:'Random 4',
-//         stock:550,
-//         price:55000,
-//         description:'lorem ipsu,dkfnkdnfdnfkdnflk',
-//         img:'../shopping-cart.png',
-//         category:'mas vendidos'
-//     },
-// ]
 
 export const getProducts = () =>{
   
