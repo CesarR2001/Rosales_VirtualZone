@@ -390,14 +390,6 @@
 
 
 
-
-
-
-
-
-
-
-
 /* Estilos del formulario */
 .form-container {
   background-color: #34495e;
@@ -474,3 +466,198 @@
     font-size: 16px;
   }
 }
+
+/* Estilos generales para la tienda de videojuegos */
+
+/* Contenedor principal del carrito (CartView) */
+.cart-container {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+}
+
+/* Estilos generales para la tienda de videojuegos */
+
+/* Contenedor principal del carrito */
+.cart-container {
+  background-color: #181818; /* Fondo oscuro */
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título del carrito */
+.cart-title {
+  font-size: 2.5rem;
+  color: #ffcc00; /* Color amarillo */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de la lista del carrito */
+.cart-list-container {
+  background-color: #333; /* Fondo gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para el total a pagar */
+.cart-total {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contenedor de los botones de acción */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Estilo para los botones */
+.cart-actions .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 48%;
+  margin: 10px 0;
+}
+
+.cart-actions .btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cart-actions .btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.cart-actions .btn-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.cart-actions .btn-success:hover {
+  background-color: #27ae60;
+}
+
+/* Estilos para cada ítem del carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.05);
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.cart-item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.cart-item-price, .cart-item-final-price {
+  font-size: 1rem;
+  color: #ffcc00;
+}
+
+.cart-item-remove {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-item-remove:hover {
+  background-color: #c0392b;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 10px; /* Reducir padding en móviles */
+  }
+
+  .cart-item {
+    flex-direction: column; /* Apilar los ítems en móviles */
+    align-items: flex-start;
+  }
+
+  .cart-item-img {
+    width: 60px;
+    height: 60px; /* Imagen más pequeña en móviles */
+  }
+
+  .cart-item-details {
+    margin-left: 0;
+  }
+
+  .cart-actions .btn {
+    width: 100%; /* Los botones ocupan todo el ancho */
+  }
+
+  .cart-actions {
+    flex-direction: column;
+  }
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+  .cart-actions .btn {
+    width: 48%; /* Botones ocupan un 48% en tablets */
+  }
+
+  .cart-item {
+    padding: 0.8rem;
+  }
+
+  .cart-item-img {
+    width: 70px;
+    height: 70px; /* Reducir tamaño de imagen en tablets */
+  }
+}
+
+

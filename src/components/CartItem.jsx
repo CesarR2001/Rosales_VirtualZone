@@ -4,13 +4,13 @@ import { useCart } from '../context/CartContext'
 const CartItem = ({prod}) => {
     const {removeItem} = useCart()
     return (
-    <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%', padding:'2rem' }}>
-        <img src={prod.img} alt={prod.name} style={{width:'10rem'}}/>
-        <span>{prod.name}</span>
-        <span>{prod.cantidad}</span>
-        <span>${prod.price},00</span>
-        <span>Precio final:${prod.cantidad * prod.price},00</span>
-        <button className='btn btn-danger' onClick={()=> removeItem(prod.id)}>X</button>
+    <div className="cart-item">
+        <img src={prod.img} alt={prod.name} className="cart-item-img" />
+        <span className="cart-item-name">{prod.name}</span>
+        <span className="cart-item-quantity">{prod.cantidad}</span>
+        <span className="cart-item-price">${prod.price},00</span>
+        <span className="cart-item-final-price">Precio final:${prod.cantidad * prod.price},00</span>
+        <button cclassName="cart-item-remove" onClick={()=> removeItem(prod.id)}>X</button>
     </div>
     )
 }

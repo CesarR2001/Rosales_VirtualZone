@@ -3,6 +3,7 @@ import { CartContext } from '../context/CartContext'
 import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { db } from '../services/firebase'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const Checkout = () => {
     const [user, setUser] = useState({})
@@ -20,9 +21,17 @@ const Checkout = () => {
   const finalizarCompra = (e)=>{
     e.preventDefault()
     if(!user.name || !user.lastname || !user.email || !user.address){
-        alert('Los campos son obligatorios')
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Debe completar todos los campos",
+        });
     }else if(user.email !== validate){
-        alert('Los mails deben ser iguales')
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Los mails deben ser iguales!",
+        });
     }else{
         //objeto de la orden
         let order = {
