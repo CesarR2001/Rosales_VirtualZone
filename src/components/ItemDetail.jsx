@@ -10,7 +10,7 @@ const ItemDetail = ({producto}) => {
     const onAdd = (cantidad) =>{
         setCompra(true)
         Swal.fire({
-            position: "top-end",
+            position: "top",
             icon: "success",
             title: `Agregaste ${producto.name} al carrito`,
             showConfirmButton: false,
